@@ -187,7 +187,7 @@ public final class IoUringSendFile implements IoUringIoHandle {
         IoUringIoOps ioUringIoOps = IoUringIoOps.newSplice(
                 inFd.intValue(), offset,
                 pipeFd.writeFd().intValue(), -1L,
-                len, spliceFlags
+                len, spliceFlags, (short) 0
         );
         spliceOperationId = ioRegistration.submit(ioUringIoOps);
     }
@@ -201,7 +201,7 @@ public final class IoUringSendFile implements IoUringIoHandle {
         IoUringIoOps ioUringIoOps = IoUringIoOps.newSplice(
                 pipeFd.readFd().intValue(), -1L,
                 outFd.intValue(), offset,
-                len, spliceFlags
+                len, spliceFlags, (short) 0
         );
         spliceOperationId = ioRegistration.submit(ioUringIoOps);
     }
