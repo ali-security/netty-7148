@@ -128,7 +128,7 @@
         <dependency>
           <groupId>io.netty</groupId>
           <artifactId>netty-transport-native-unix-common</artifactId>
-          <version>${project.version}</version>
+          <version>4.1.114.Final</version>
           <classifier>${jni.classifier}</classifier>
           <!--
           The unix-common with classifier dependency is optional because it is not a runtime dependency, but a build time
@@ -237,7 +237,7 @@
         <dependency>
           <groupId>io.netty</groupId>
           <artifactId>netty-transport-native-unix-common</artifactId>
-          <version>${project.version}</version>
+          <version>4.1.114.Final</version>
           <classifier>${jni.classifier}</classifier>
           <!--
           The unix-common with classifier dependency is optional because it is not a runtime dependency, but a build time
@@ -346,7 +346,7 @@
         <dependency>
           <groupId>io.netty</groupId>
           <artifactId>netty-transport-native-unix-common</artifactId>
-          <version>${project.version}</version>
+          <version>4.1.114.Final</version>
           <classifier>${jni.classifier}</classifier>
           <!--
           The unix-common with classifier dependency is optional because it is not a runtime dependency, but a build time
@@ -451,7 +451,7 @@
         <dependency>
           <groupId>io.netty</groupId>
           <artifactId>netty-transport-native-unix-common</artifactId>
-          <version>${project.version}</version>
+          <version>4.1.114.Final</version>
           <classifier>${jni.classifier}</classifier>
           <!--
           The unix-common with classifier dependency is optional because it is not a runtime dependency, but a build time
@@ -556,7 +556,7 @@
         <dependency>
           <groupId>io.netty</groupId>
           <artifactId>netty-transport-native-unix-common</artifactId>
-          <version>${project.version}</version>
+          <version>4.1.114.Final</version>
           <classifier>${jni.classifier}</classifier>
           <!--
           The unix-common with classifier dependency is optional because it is not a runtime dependency, but a build time
@@ -611,38 +611,38 @@
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-common</artifactId>
-      <version>${project.version}</version>
+      <version>4.1.114.Final+sp1</version>
     </dependency>
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-buffer</artifactId>
-      <version>${project.version}</version>
+      <version>4.1.114.Final</version>
     </dependency>
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-transport</artifactId>
-      <version>${project.version}</version>
+      <version>4.1.114.Final</version>
     </dependency>
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-transport-native-unix-common</artifactId>
-      <version>${project.version}</version>
+      <version>4.1.114.Final</version>
     </dependency>
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-transport-classes-kqueue</artifactId>
-      <version>${project.version}</version>
+      <version>4.1.114.Final</version>
     </dependency>
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-testsuite</artifactId>
-      <version>${project.version}</version>
+      <version>4.1.114.Final</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-transport-native-unix-common-tests</artifactId>
-      <version>${project.version}</version>
+      <version>4.1.114.Final</version>
       <scope>test</scope>
     </dependency>
     <dependency>

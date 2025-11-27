@@ -41,17 +41,17 @@
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-codec-http</artifactId>
-      <version>${project.version}</version>
+      <version>4.1.114.Final</version>
     </dependency>
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-transport</artifactId>
-      <version>${project.version}</version>
+      <version>4.1.114.Final</version>
     </dependency>
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-resolver-dns</artifactId>
-      <version>${project.version}</version>
+      <version>4.1.114.Final</version>
     </dependency>
   </dependencies>
 </project>

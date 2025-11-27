@@ -40,7 +40,7 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>netty-common</artifactId>
-      <version>${project.version}</version>
+      <version>4.1.114.Final+sp1</version>
     </dependency>
   </dependencies>
 
