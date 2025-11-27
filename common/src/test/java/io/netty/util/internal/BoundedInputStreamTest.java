@@ -22,6 +22,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class BoundedInputStreamTest {
@@ -36,7 +37,38 @@ public class BoundedInputStreamTest {
         assertThrows(IOException.class, new Executable() {
             @Override
             public void execute() throws Throwable {
-                reader.read(new byte[64], 0, 64);
+                int max = bytes.length;
+                do {
+                    int result = reader.read(new byte[max], 0, max);
+                    assertNotEquals(result, -1);
+                    max -= result;
+                } while (max > 0);
+            }
+        });
+        reader.close();
+    }
+
+    @Test
+    void testBoundEnforced256() throws IOException {
+        final byte[] bytes = new byte[256];
+        for (int i = 0; i < bytes.length; i++) {
+            bytes[i] = (byte) i;
+        }
+        final BoundedInputStream reader = new BoundedInputStream(new ByteArrayInputStream(bytes), bytes.length - 1);
+        for (byte expectedByte : bytes) {
+            assertEquals(expectedByte, (byte) reader.read());
+        }
+
+        assertThrows(IOException.class, new Executable() {
+            @Override
+            public void execute() throws Throwable {
+                reader.read();
+            }
+        });
+        assertThrows(IOException.class, new Executable() {
+            @Override
+            public void execute() throws Throwable {
+                reader.read(new byte[1], 0, 1);
             }
         });
         reader.close();
